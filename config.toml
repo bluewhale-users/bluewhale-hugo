@@ -1,4 +1,4 @@
-baseURL = 'http://bluewhale-users.github.io/'
+baseURL = 'https://bluewhale-users.github.io/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "hugo-theme-techdoc"
