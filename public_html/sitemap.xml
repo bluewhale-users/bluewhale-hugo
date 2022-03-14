@@ -2,17 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://bluewhale-users.github.io/okd/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://bluewhale-users.github.io/okd/tutorial1/</loc>
+    <lastmod>2022-03-14T10:39:13+09:00</lastmod>
+  </url><url>
+    <loc>https://bluewhale-users.github.io/</loc>
+    <lastmod>2022-03-11T12:30:26+09:00</lastmod>
+  </url><url>
+    <loc>https://bluewhale-users.github.io/post/</loc>
     <lastmod>2022-03-11T12:14:58+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://bluewhale-users.github.io/post/test/</loc>
     <lastmod>2022-03-11T12:14:58+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/post/test/</loc>
-    <lastmod>2022-03-11T12:14:58+09:00</lastmod>
+    <loc>https://bluewhale-users.github.io/categories/</loc>
   </url><url>
-    <loc>http://example.org/categories/</loc>
-  </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://bluewhale-users.github.io/tags/</loc>
   </url>
 </urlset>

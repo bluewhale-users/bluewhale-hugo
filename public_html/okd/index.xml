@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>okd on Bluewhale Tutorial Site</title>
+    <link>https://bluewhale-users.github.io/okd/</link>
+    <description>Recent content in okd on Bluewhale Tutorial Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://bluewhale-users.github.io/okd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial1</title>
+      <link>https://bluewhale-users.github.io/okd/tutorial1/</link>
+      <pubDate>Mon, 14 Mar 2022 10:39:13 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/okd/tutorial1/</guid>
+      <description>OKD Tutorial #1 작성중입니다.</description>
+    </item>
+    
+  </channel>
+</rss>
