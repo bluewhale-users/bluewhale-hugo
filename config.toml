@@ -74,8 +74,8 @@ enableMissingTranslationPlaceholders = false
         weight = 1
 
     [[menu.main]]
-        name = "Blackwhale(OKD)"
-        url = "https://console-openshift-console.apps.blackwhale.cloud.hancom.com/"
+        name = "개발자센터"
+        url = "http://hnc-dev-center-intro.s3-website.ap-northeast-2.amazonaws.com/"
         weight = 2
 
 # Markup configure section
