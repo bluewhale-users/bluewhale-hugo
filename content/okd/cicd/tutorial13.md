@@ -1,12 +1,12 @@
 ---
-title: "Tutorial13"
+title: "Tutorial13 : BuildConfig 사용 예"
 date: 2022-03-15T11:33:27+09:00
 weight: 53
 ---
 
-# orca-harbor + buildconfig
+## orca-harbor + buildconfig
 
-### image pull secret 추가
+### 1. image pull secret 추가
 ```
 Secret name : orca-harbor-secret
 Registry server address : orca-harbor.cloud.hancom.com
@@ -15,11 +15,11 @@ Password : harbor 접속후 CLI secret 확인
 ```
 {{< figure src="/cicd/tutorial13_1.jpg" >}}
 
-### User Profile을 눌러 CLI secret 복사후 사용
+### 2. User Profile을 눌러 CLI secret 복사후 사용
 {{< figure src="/cicd/tutorial13_2.jpg" >}}
 
 
-### BuildConfig 사용 예제1
+### 3. BuildConfig 사용 예제1
 ``` bash
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
@@ -51,7 +51,7 @@ spec:
     - type: ConfigChange
 ```
 
-### BuildConfig 사용 예제2
+### 4. BuildConfig 사용 예제2
 ``` bash
 apiVersion: build.openshift.io/v1
 kind: BuildConfig

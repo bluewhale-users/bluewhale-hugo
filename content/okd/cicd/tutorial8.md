@@ -1,5 +1,5 @@
 ---
-title: "Tutorial8"
+title: "Tutorial8 : ArgoCD 설정"
 date: 2022-03-15T11:32:36+09:00
 weight: 48
 ---

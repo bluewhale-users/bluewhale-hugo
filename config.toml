@@ -1,117 +1,112 @@
 baseURL = 'https://bluewhale-users.github.io/'
 languageCode = 'en-us'
-title = 'Bluewhale Tutorial Site'
+title = '한컴 클라우드 플랫폼'
 theme = "hugo-theme-learn"
 
-hasCJKLanguage = true
-metaDataFormat = "yaml"
-
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir= false
-enableMissingTranslationPlaceholders = false
+
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
 
 [params]
-
-    # Source Code repository section
-    description = "put your description"
-    github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.9.7"
-
-    # Documentation repository section
-    # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    github_doc_repository_path = ""
-
-    # Analytic section
-    google_analytics_id = "" # Your Google Analytics tracking id
-    tag_manager_container_id = "" # Your Google Tag Manager container id
-    google_site_verification = "" # Your Google Site Verification for Search Console
-
-    # Open Graph and Twitter Cards settings section
-    # Open Graph settings for each page are set on the front matter.
-    # See https://gohugo.io/templates/internal/#open-graph
-    # See https://gohugo.io/templates/internal/#twitter-cards
-    title = "Hugo Techdoc Theme"
-    images = ["images/og-image.png"] # Open graph images are placed in `static/images`
-
-    # Theme settings section
-    # Theme color
-    # See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
-    custom_font_color = ""
-    custom_background_color = ""
-
-    # Documentation Menu section
-    # Menu style settings
-    menu_style = "slide-menu" # "open-menu" or "slide-menu" or "" blank is as no sidebar
-
-    # Date format
-    dateformat = "" # default "2 Jan 2006"
-    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
-
-    # path name excluded from documentation menu
-    menu_exclusion = [
-        "archives",
-        "archive",
-        "blog",
-        "entry",
-        "post",
-        "posts",
-    ]
-
-    # Algolia site search section
-    # See https://www.algolia.com/doc/
-    algolia_search_enable = true
-    algolia_indexName = "hugo-demo-techdoc"
-    algolia_appId = "7W4SAN4PLK"
-    algolia_apiKey = "cbf12a63ff72d9c5dc0c10c195cf9128" # Search-Only API Key
-
-# Global menu section
-# See https://gohugo.io/content-management/menus/
-[menu]
-    [[menu.main]]
-        name = "Home"
-        url = "/"
-        weight = 1
-
-    [[menu.main]]
-        name = "개발자센터"
-        url = "http://hnc-dev-center-intro.s3-website.ap-northeast-2.amazonaws.com/"
-        weight = 2
-
-# Markup configure section
-# See https://gohugo.io/getting-started/configuration-markup/
-[markup]
-    defaultMarkdownHandler = "goldmark"
-    [markup.goldmark.renderer]
-        unsafe= true
-    [markup.tableOfContents]
-        startLevel = 2
-        endLevel = 6
-        ordered = false
+  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
+  description = "Documentation for Hugo Learn Theme"
+  author = "Mathieu Cornic"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = true
+  disableMermaid = false
+  customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
+  titleSeparator = "::"
 
 [outputs]
-    home = ["HTML", "RSS", "Algolia"]
+home = [ "HTML", "RSS", "JSON"]
 
-# Algolia Search configure section
-[outputFormats.Algolia]
-    baseName = "algolia"
-    mediaType = "application/json"
-    isPlainText = true
-    notAlternative = true
+[Languages]
+[Languages.en]
+title = "Documentation for Hugo Learn Theme"
+weight = 1
+languageName = "English"
+landingPageURL = "/en"
+landingPageName = "<i class='fas fa-home'></i> Home"
 
-[params.algolia]
-    vars = [
-        "title",
-        "summary",
-        "content",
-        "date",
-        "publishdate",
-        "description",
-        "permalink",
-        "keywords",
-        "lastmod",
-    ]
-    params = [
-        "tags",
-        "categories",
-    ]
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/matcornic/hugo-theme-learn"
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> Showcases"
+url = "showcase"
+weight = 11
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
+
+[Languages.fr]
+title = "Documentation du thème Hugo Learn"
+weight = 2
+languageName = "Français"
+landingPageURL = "/fr"
+landingPageName = "<i class='fas fa-home'></i> Accueil"
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Repo GitHub"
+identifier = "ds"
+url = "https://github.com/matcornic/hugo-theme-learn"
+weight = 10
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> Vitrine"
+url = "/showcase"
+weight = 11
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Documentation Hugo"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Crédits"
+url = "/credits"
+weight = 30
+
+[Languages.zh]
+title = "Hugo 主题的 Learn 文档"
+weight = 3
+languageName = "简体中文"
+landingPageURL = "/zh"
+landingPageName = "<i class='fas fa-home'></i> 家"
+
+[[Languages.zh.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub 仓库"
+identifier = "ds"
+url = "https://github.com/matcornic/hugo-theme-learn"
+weight = 10
+
+[[Languages.zh.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> 展示区"
+url = "/showcase"
+weight = 11
+
+[[Languages.zh.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Hugo 文档"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
+
+[[Languages.zh.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> 鸣谢"
+url = "/credits"
+weight = 30

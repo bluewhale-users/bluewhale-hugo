@@ -1,5 +1,5 @@
 ---
-title: "CI/CD"
+title: "CI/CD 튜토리얼"
 date: 2017-10-17T15:26:15Z
 draft: false
 menu:

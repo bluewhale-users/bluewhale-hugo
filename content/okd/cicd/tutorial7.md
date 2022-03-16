@@ -1,24 +1,24 @@
 ---
-title: "Tutorial7"
+title: "Tutorial7 : 테스트 빌드"
 date: 2022-03-15T11:32:25+09:00
 weight: 47
 ---
 
-# Jenkins Test Build
+## Jenkins Test Build
 
-## 1. Build now 선택
+### 1. Build now 선택
 {{< figure src="/cicd/tutorial7_1.jpg" >}}
 
-### 빌드 성공
+### 2. 빌드 성공
 {{< figure src="/cicd/tutorial7_3.jpg" >}}
 
-### dockerhub 이미지 push 확인
+### 3. dockerhub 이미지 push 확인
 {{< figure src="/cicd/tutorial7_2.jpg" >}}
 
-### gitops repo 확인
+### 4. gitops repo 확인
 {{< figure src="/cicd/tutorial7_4.jpg" >}}
 
-### jenkinsfile 확인
+### 5. jenkinsfile 확인
 ``` bash
 library identifier: "pipeline-library@v1.5",
 retriever: modernSCM(

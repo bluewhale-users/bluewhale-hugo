@@ -1,19 +1,19 @@
 ---
-title: "Tutorial11"
+title: "Tutorial11 : 문제 해결"
 date: 2022-03-15T11:33:03+09:00
 weight: 51
 ---
 
-# 문제 해결
+## 문제 해결
 
-## OKD BuildConfig 빌드 확인
+### 1. OKD BuildConfig 빌드 확인
 ```
 - okd -> Developer -> Builds 
 - 생성한 BuildConfig를 선택해 Builds 탭으로 이동하면 빌드 히스토리를 확인할 수 있다.  
 ```
 {{< figure src="/cicd/tutorial11_1.jpg" >}}
 
-## 새로 배포한 버전이 이전 이미지를 참고하는 문제
+### 2. 새로 배포한 버전이 이전 이미지를 참고하는 문제
 ```
 Deployment의 imagePullPolicy가 Always로 주었음에도
 이미지 갱신이 되지 않는 경우가 발생한다. 
@@ -49,7 +49,7 @@ The yaml file is resolved when the buildConfig is created, it can't have referen
 Another option I would prefer is to use ImageStreams. With ImageStream a single object keeps track of all versions of the image via sha codes, therefore there is no need to update the yaml every time.
 ```
 
-## https 지원
+### 3. https 지원
 ```
 [service.yaml]
 ....

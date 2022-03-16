@@ -1,19 +1,19 @@
 ---
-title: "Tutorial12"
+title: "Tutorial12 : Private Repo 연동방법"
 date: 2022-03-15T11:33:14+09:00
 weight: 52
 ---
 
-# Private Repository 연동
+## Private Repository 연동
 
-## 1. SSH 키 생성
+### 1. SSH 키 생성
 ``` 
 - Git Bash 실행
 - 사용자 폴더로 이동후 .ssh 폴더 생성 및 이동
 - ssh-keygen 실행
 ```
 
-## ssh-keygen 사용시 기본값(SHA-1)은 github에서 더 이상 인증 용도로 사용할 수 없다. 
+#### 1.1 ssh-keygen 사용시 기본값(SHA-1)은 github에서 더 이상 인증 용도로 사용할 수 없다. 
 Update : 2022-01-11  
 November 16, 2021	The ECDSA and Ed25519 host keys will start to be fully usable. GitHub’s DSA host key will no longer be supported.
 
@@ -64,17 +64,17 @@ The key's randomart image is:
 {{< figure src="/cicd/tutorial12_1.jpg" >}}
 {{< figure src="/cicd/tutorial12_2.jpg" >}}
 
-## 2. Github Private Repository 설정  
-### User profile에서 Settings 이동
+### 2. Github Private Repository 설정  
+#### 2.1 User profile에서 Settings 이동
 {{< figure src="/cicd/tutorial12_3.jpg" >}}
 
-### SSH and GPG Keys 설정으로 이동  
+#### 2.2 SSH and GPG Keys 설정으로 이동  
 {{< figure src="/cicd/tutorial12_4.jpg" >}}
 
-### New SSH key 선택후 생성한 testuser_id.pub 파일을 메모장으로 열어 모두 복사후 붙여넣기
+#### 2.3 New SSH key 선택후 생성한 testuser_id.pub 파일을 메모장으로 열어 모두 복사후 붙여넣기
 {{< figure src="/cicd/tutorial12_5.jpg" >}}
 
-## 3. Repository Clone 방법
+### 3. Repository Clone 방법
 - "사용자 폴더"/.ssh/config 파일을 만든다. 
 {{< figure src="/cicd/tutorial12_6.jpg" >}}
 
@@ -101,7 +101,7 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
 ```
 
-## Jenkins Private Repository 설정 방법
+### 4. Jenkins Private Repository 설정 방법
 - Deploy Key 생성
 ```
 SSH 키 생성
@@ -109,17 +109,17 @@ Git Bash 실행
 사용자 폴더로 이동후 .ssh 폴더 생성 및 이동
 ssh-keygen 실행
 ```
-### ssh key 생성  
+#### 4.1 ssh key 생성  
 {{< figure src="/cicd/tutorial12_8.jpg" >}}
 {{< figure src="/cicd/tutorial12_9.jpg" >}}
 
-### GitHub private repository로 이동하여, Settings의 Deploy Keys를 선택한다. 
+#### 4.2 GitHub private repository로 이동하여, Settings의 Deploy Keys를 선택한다. 
 {{< figure src="/cicd/tutorial12_10.jpg" >}}
 
-### 생성한 Public Key를 메모장으로 열어 모두 복사후 붙여 넣는다. 
+#### 4.3 생성한 Public Key를 메모장으로 열어 모두 복사후 붙여 넣는다. 
 {{< figure src="/cicd/tutorial12_11.jpg" >}}
 
-## Jenkins 설정
+### 5. Jenkins 설정
 ```
 - Jenkins →  Jenkins 관리 → Manage Credentials 이동
 - (global) 도메인 선택
@@ -147,8 +147,8 @@ Credentials에서 본인이 생성한 Credential을 선택한다.
 ```
 {{< figure src="/cicd/tutorial12_15.jpg" >}}
 
-## ArgoCD Private Repository 설정 방법
-### ArgoCD 이동후 Settings → Repositories 이동
+### 6. ArgoCD Private Repository 설정 방법
+#### 6.1 ArgoCD 이동후 Settings → Repositories 이동
 {{< figure src="/cicd/tutorial12_16.jpg" >}}
 
 ```

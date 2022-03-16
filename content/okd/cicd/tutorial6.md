@@ -1,24 +1,24 @@
 ---
-title: "Tutorial6"
+title: "Tutorial6 : Buildconfig 설정"
 date: 2022-03-15T11:32:10+09:00
 weight: 46
 ---
 
-# OKD Buildconfig 설정
+## OKD Buildconfig 설정
 
 ```
 설치한 Jenkins 버전에는 docker를 포함하지 않는다. 
 docker image 빌드를 위해 okd buildconfig를 사용한다. 
 ```
 
-## 1. BuildConfig 생성
+### 1. BuildConfig 생성
 ```
 - okd -> Developer -> Builds
 ```
 
 {{< figure src="/cicd/tutorial6_1.jpg" >}}
 
-### Create BuildConfig 선택
+#### 1.1 Create BuildConfig 선택
 {{< figure src="/cicd/tutorial6_2.jpg" >}}
 
 [Jenkinsfile 확인](https://github.com/bluewhale-users/okd-tutorial1-src/blob/master/Jenkinsfile)
@@ -29,7 +29,7 @@ BuildConfig 이름을 jenkinsfile에 appName 으로 맵핑된다.
 appName = "okd-tutorial"
 ```
 
-### 아래 내용을 편집해 본인 설정에 맞게 변경한다. 
+#### 1.2 아래 내용을 편집해 본인 설정에 맞게 변경한다. 
 [BuildConfig YAML 샘플](https://github.com/bluewhale-users/okd-tutorial1-src/blob/master/openshift-build-example.yml)
 
 ``` bash
@@ -56,29 +56,29 @@ spec:
   runPolicy: Serial 
 ```
 
-### 생성 화면
+#### 1.3 생성 화면
 {{< figure src="/cicd/tutorial6_3.jpg" >}}
 
-## 2. Secrets 추가
+### 2. Secrets 추가
 {{< figure src="/cicd/tutorial6_4.jpg" >}}
 
-### Create(Image pull secret) 선택
+#### 2.1 Create(Image pull secret) 선택
 {{< figure src="/cicd/tutorial6_5.jpg" >}}
 
-### dockerhub에 가입한 아이디와 패스워드를 입력한다. 
+#### 2.2 dockerhub에 가입한 아이디와 패스워드를 입력한다. 
 ```
 Secret name : dockerio-okdtutorial
 ```
 {{< figure src="/cicd/tutorial6_6.jpg" >}}
 
-## 3. ServiceAccount(builder)에 secret 추가
+### 3. ServiceAccount(builder)에 secret 추가
 ```
 - okd -> Administrator -> User Management -> ServiceAccounts 이동
 ```
 {{< figure src="/cicd/tutorial6_7.jpg" >}}
 
-### builder 선택
+#### 4. builder 선택
 {{< figure src="/cicd/tutorial6_8.jpg" >}}
 
-### Secrets 섹션에 dockerio-okdtutorial 추가후 Save 선택
+#### 5. Secrets 섹션에 dockerio-okdtutorial 추가후 Save 선택
 {{< figure src="/cicd/tutorial6_9.jpg" >}}

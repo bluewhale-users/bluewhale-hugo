@@ -1,11 +1,11 @@
 ---
-title: "Tutorial2"
+title: "Tutorial2 : 리파지토리 생성"
 date: 2022-03-15T11:27:51+09:00
 draft: false
 weight: 42
 ---
 
-# GitHub Repository 준비
+## GitHub Repository 준비
 
 ## origin repository
 [src] https://github.com/bluewhale-users/okd-tutorial1-src  
