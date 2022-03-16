@@ -1,7 +1,7 @@
 baseURL = 'https://bluewhale-users.github.io/'
 languageCode = 'en-us'
 title = 'Bluewhale Tutorial Site'
-theme = "hugo-theme-techdoc"
+theme = "hugo-theme-learn"
 
 hasCJKLanguage = true
 metaDataFormat = "yaml"
