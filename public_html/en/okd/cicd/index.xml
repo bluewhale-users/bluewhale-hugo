@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CI/CD 튜토리얼 on Documentation for Hugo Learn Theme</title>
+    <link>https://bluewhale-users.github.io/en/okd/cicd/</link>
+    <description>Recent content in CI/CD 튜토리얼 on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://bluewhale-users.github.io/en/okd/cicd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial1 : 준비</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial1/</link>
+      <pubDate>Tue, 15 Mar 2022 10:47:32 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial1/</guid>
+      <description>OKD CI/CD Tutorial  CI/CD Flow with Argo CD   [출처] https://www.gspann.com/resources/blogs/continuous-delivery-for-kubernetes-with-gitops-and-argo-cd/
+&amp;#39;GitOps&amp;#39;는 형상 관리 도구인 &amp;#39;Git&amp;#39; 을 통해 개발자에게 익숙한 방식으로 인프라 또는 어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말한다. 튜토리얼은 2개의 리파지토리가 필요하다. 어플리케이션 소스를 담고있는 Source Repository OKD에 배포설정(manifest files)들을 담고 있는 GitOps Repository OKD CI/CD 프로세스 1. Source Repo에 변경사항이 Commit 2. Jenkins에서 변경사항을 감지하고 빌드 수행 3. Docker Image를 dockerhub에 Push 4. GitOps Repo의 deployment manifest파일을 업데이트(tag version) 5.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial2 : 리파지토리 생성</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial2/</link>
+      <pubDate>Tue, 15 Mar 2022 11:27:51 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial2/</guid>
+      <description>GitHub Repository 준비 origin repository [src] https://github.com/bluewhale-users/okd-tutorial1-src
+[gitops] https://github.com/bluewhale-users/okd-tutorial1-gitops
+fork repository [src] https://github.com/blackwhale-testuser/okd-tutorial1-src
+[gitops] https://github.com/blackwhale-testuser/okd-tutorial1-gitops
+1. 2개 리파지토리를 본인 계정으로 fork 한다.  2. Deploy Key 생성 및 등록 jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy key를 등록한다.
+2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성 user@DESKTOP-1RAT70A MINGW64 ~/.ssh $ ssh-keygen Generating public/private rsa key pair. Enter file in which to save the key (/c/Users/user/.ssh/id_rsa): okd-tutorial-deploykey Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in okd-tutorial-deploykey.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial3 : DockerHub 설정</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial3/</link>
+      <pubDate>Tue, 15 Mar 2022 11:31:20 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial3/</guid>
+      <description>DockerHub 설정 1. docker hub에 계정을 만든다. dockerhub
+ 2.리파지토리를 생성한다. name : okdtutorial visibility : public   </description>
+    </item>
+    
+    <item>
+      <title>Tutorial4 : Jenkins 설정</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial4/</link>
+      <pubDate>Tue, 15 Mar 2022 11:31:43 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial4/</guid>
+      <description>Jenkins 설치 1. OKD 로그인 https://console-openshift-console.apps.blackwhale.cloud.hancom.com/
+ 2. Project 만들기   3. 역할 전환(developer)   4. Jenkins 설치 OKD-&amp;gt;Developer-&amp;gt;Add 4.1 All services 선택  4.2 jenkins 로 검색  4.3 Jenkins v0.0.3 Helm Charts 버전 설치 (기본 설정 사용)   4.4 설치 완료(Pods의 상태가 Running으로 바뀔때까지 대기)  5. OpenURL 아이콘을 선택해 jenkins 서비스 접속  6. Allow selected permissions 선택  7. 접속 완료 화면  </description>
+    </item>
+    
+    <item>
+      <title>Tutorial5 : Jenkins Pipeline 구성</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial5/</link>
+      <pubDate>Tue, 15 Mar 2022 11:31:56 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial5/</guid>
+      <description>Jenkins Pipeline 구성 1. ssh agent plug-in 설치 - Jenkins -&amp;gt; Jenkins 관리 -&amp;gt; 플러그인 관리 이동 - &amp;#34;ssh agent&amp;#34; 검색  1.1 Download now and install after restart 선택  1.2 설치가 끝나고 실행중인 작업이 없으면 Jenkins 재시작 선택  1.3 로그인 화면  2. credentials 등록 - Jenkins -&amp;gt; Jenkins 관리 -&amp;gt; Manage Credentials 이동 2.1 (Global) 도메인 선택  2.2 Add Credentials 선택  Jenkinsfile 확인
+jenkinsfile의 credentialsId 이름으로 등록한다.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial6 : Buildconfig 설정</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial6/</link>
+      <pubDate>Tue, 15 Mar 2022 11:32:10 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial6/</guid>
+      <description>OKD Buildconfig 설정 설치한 Jenkins 버전에는 docker를 포함하지 않는다. docker image 빌드를 위해 okd buildconfig를 사용한다. 1. BuildConfig 생성 - okd -&amp;gt; Developer -&amp;gt; Builds  1.1 Create BuildConfig 선택  Jenkinsfile 확인
+BuildConfig 이름을 jenkinsfile에 appName 으로 맵핑된다. - jenkinsfile의 appName을 BuildConfig의 이름으로 변경한다. appName = &amp;#34;okd-tutorial&amp;#34; 1.2 아래 내용을 편집해 본인 설정에 맞게 변경한다. BuildConfig YAML 샘플
+kind: BuildConfig apiVersion: build.openshift.io/v1 metadata:  name: okd-tutorial  labels:  app.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial7 : 테스트 빌드</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial7/</link>
+      <pubDate>Tue, 15 Mar 2022 11:32:25 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial7/</guid>
+      <description>Jenkins Test Build 1. Build now 선택  2. 빌드 성공  3. dockerhub 이미지 push 확인  4. gitops repo 확인  5. jenkinsfile 확인 library identifier: &amp;#34;pipeline-library@v1.5&amp;#34;, retriever: modernSCM(  [  $class: &amp;#34;GitSCMSource&amp;#34;,  remote: &amp;#34;https://github.com/redhat-cop/pipeline-library.git&amp;#34;  ] )  // OKD의 Buildconifg의 이름과 일치시켜야 한다. appName = &amp;#34;okd-tutorial&amp;#34;  pipeline {  agent {  node {  label &amp;#39;nodejs&amp;#39;  }  }  options {  timeout(time: 20, unit: &amp;#39;MINUTES&amp;#39;)  }  stages {  stage(&amp;#34;Checkout&amp;#34;) {  steps {  checkout scm  }  }  stage(&amp;#39;Build&amp;#39;) {  steps {  sh &amp;#39;npm install&amp;#39;  sh &amp;#39;CI=false npm run build&amp;#39;  }  }  stage(&amp;#34;Docker Build&amp;#34;) {  steps {  // This uploads your application&amp;#39;s source code and performs a binary build in OpenShift // This is a step defined in the shared library (see the top for the URL) // (Or you could invoke this step using &amp;#39;oc&amp;#39; commands!</description>
+    </item>
+    
+    <item>
+      <title>Tutorial8 : ArgoCD 설정</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial8/</link>
+      <pubDate>Tue, 15 Mar 2022 11:32:36 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial8/</guid>
+      <description>ArgoCD 설치 1. ArgoCD Operator 이동 - okd -&amp;gt; Administrator -&amp;gt; Operators -&amp;gt; Installed Operators 이동  2. ArgoCD 탭으로 이동후 Create ArgoCD 선택    3. Developer로 변경후 Topology 확인 - okd -&amp;gt; Developer -&amp;gt; Topology  4. ArgoCD Admin 패스워드 확인 - okd -&amp;gt; Developer -&amp;gt; Secrets 이동 - cluster 검색  argocd-sample-cluster 시크릿 확인  Reveal values 클릭 (복호화된 admin password를 확인할 수 있다.)  r8BtkSKu3J0ex4TXUbsoDYMw************  [Tip] 암호 변경은 YAML 탭으로 변경후 admin.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial9 : ArgoCD를 이용한 배포</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial9/</link>
+      <pubDate>Tue, 15 Mar 2022 11:32:43 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial9/</guid>
+      <description>ArgoCD App 배포하기 1. image registry 주소 변경 GitOps Repo
+아래 2개의 yaml파일을 편집해 이미지 경로를 본인 dockerhub의 계정과 리파지토리로 변경한다. base/deployment-sample.yaml okd-deploy/testblog-deployment.yaml image: docker.io/spcsenti/testblog:latest --&amp;gt; image: docker.io/spcsenti2023/okdtutorial:latest 2. New App 선택 [GENERAL] Application Name : okd-tutorial Project : default [SOURCE] Repository URL : https://github.com/blackwhale-testuser/okd-tutorial1-gitops Revision : HEAD Path : okd-deploy [DESTINATION] Cluster URL : https://kubernetes.default.svc Namespace : okd-tutorial  2.1 Out of Sync일 경우에는 SYNC 버튼을 눌러 Synchronize를 수행한다.  2.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial10 : GitHub Webhook 추가</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial10/</link>
+      <pubDate>Tue, 15 Mar 2022 11:32:53 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial10/</guid>
+      <description>CI/CD 1. GitHub Source Repository에 Webhook 추가 Source Repositoy
+1.1 Settings -&amp;gt; Webhooks 이동후 Add Webhook 선택  1.2 jenkins 주소를 확인후 payload url에 입력  Payload URL : https://jenkins-okd-tutorial.apps.blackwhale.cloud.hancom.com/github-webhook/ Content type : application/json Trigger : Juste the push event 1.3 소스 수정후 commit Jenkinsfile의 태그를 업데이트 해야 GitOps Repo로 Commit 할 수 있다. sed -i &amp;#39;s/MY_BUILD_TAG/$BUILD_NUMBER/&amp;#39; testblog-deployment.yaml BUILD_NUMBER가 정상적으로 셋팅되는지 확인  1.4 Jenkins 빌드가 자동으로 동작하는지 확인  2.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial11 : 문제 해결</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial11/</link>
+      <pubDate>Tue, 15 Mar 2022 11:33:03 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial11/</guid>
+      <description>문제 해결 1. OKD BuildConfig 빌드 확인 - okd -&amp;gt; Developer -&amp;gt; Builds - 생성한 BuildConfig를 선택해 Builds 탭으로 이동하면 빌드 히스토리를 확인할 수 있다.  2. 새로 배포한 버전이 이전 이미지를 참고하는 문제 Deployment의 imagePullPolicy가 Always로 주었음에도 이미지 갱신이 되지 않는 경우가 발생한다. 저장소의 이미지와 로컬에 있는 이미지가 동일한 경우 이런 문제가 발생한다. Tag와 Digest 값이 동일한지 확인해본다. &amp;lt;before&amp;gt; spcsenti2023/okdtutorial:latest DIGEST:sha256:7521223d8a7c54a6c9e5a40b4f4866f4394eefb3494c5de8f47fbf4e536c40e9 &amp;lt;current&amp;gt; spcsenti2023/okdtutorial:latest DIGEST:sha256:14480c323c64dd065fa0b71067226ab8995c5f2660a8e7d747795ebc2647e1b8 BuildConfig에서 빌드 번호 자동 업데이트 가능할까?</description>
+    </item>
+    
+    <item>
+      <title>Tutorial12 : Private Repo 연동방법</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial12/</link>
+      <pubDate>Tue, 15 Mar 2022 11:33:14 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial12/</guid>
+      <description>Private Repository 연동 1. SSH 키 생성 - Git Bash 실행 - 사용자 폴더로 이동후 .ssh 폴더 생성 및 이동 - ssh-keygen 실행 1.1 ssh-keygen 사용시 기본값(SHA-1)은 github에서 더 이상 인증 용도로 사용할 수 없다. Update : 2022-01-11
+November 16, 2021	The ECDSA and Ed25519 host keys will start to be fully usable. GitHub’s DSA host key will no longer be supported.
+Unable to connect SSH repository: unknown error: ERROR: You&amp;#39;re using an RSA key with SHA-1, which is no longer allowed.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial13 : BuildConfig 사용 예</title>
+      <link>https://bluewhale-users.github.io/en/okd/cicd/tutorial13/</link>
+      <pubDate>Tue, 15 Mar 2022 11:33:27 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/en/okd/cicd/tutorial13/</guid>
+      <description>orca-harbor + buildconfig 1. image pull secret 추가 Secret name : orca-harbor-secret Registry server address : orca-harbor.cloud.hancom.com Username : &amp;#34;이름&amp;#34; Password : harbor 접속후 CLI secret 확인  2. User Profile을 눌러 CLI secret 복사후 사용  3. BuildConfig 사용 예제1 apiVersion: build.openshift.io/v1 kind: BuildConfig metadata:  name: testblog  namespace: okd-tutorial  labels:  app.kubernetes.io/name: testblog spec:  nodeSelector: null  output:  to:  kind: DockerImage  name: &amp;#39;orca-harbor.</description>
+    </item>
+    
+  </channel>
+</rss>
