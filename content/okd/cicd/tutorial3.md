@@ -6,16 +6,16 @@ weight: 43
 
 ## DockerHub 설정
 
-### 1. docker hub에 계정을 만든다.  
-[dockerhub](https://hub.docker.com/)
+### 1. docker hub에 계정 생성
+- [dockerhub link](https://hub.docker.com/)
 
 {{< figure src="/cicd/tutorial3_1.jpg" >}}
 
 
-### 2.리파지토리를 생성한다. 
+### 2.리파지토리를 생성
 ```
 name : okdtutorial  
 visibility : public  
 ```
 {{< figure src="/cicd/tutorial3_2.jpg" >}}
-{{< figure src="/cicd/tutorial3_3.jpg" >}}
+{{< figure src="/cicd/tutorial3_3.jpg" title="[생성화면]" >}}

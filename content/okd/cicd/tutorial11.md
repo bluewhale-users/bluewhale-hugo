@@ -7,21 +7,18 @@ weight: 51
 ## 문제 해결
 
 ### 1. OKD BuildConfig 빌드 확인
-```
 - okd -> Developer -> Builds 
 - 생성한 BuildConfig를 선택해 Builds 탭으로 이동하면 빌드 히스토리를 확인할 수 있다.  
-```
 {{< figure src="/cicd/tutorial11_1.jpg" >}}
 
 ### 2. 새로 배포한 버전이 이전 이미지를 참고하는 문제
-```
-Deployment의 imagePullPolicy가 Always로 주었음에도
-이미지 갱신이 되지 않는 경우가 발생한다. 
-
+{{% notice warning %}}
+Deployment의 imagePullPolicy를 Always로 주었음에도 이미지 갱신이 되지 않는 경우가 발생한다.  
 저장소의 이미지와 로컬에 있는 이미지가 동일한 경우 이런 문제가 발생한다. 
-
 Tag와 Digest 값이 동일한지 확인해본다. 
+{{% /notice %}}
 
+```
 <before>
 spcsenti2023/okdtutorial:latest
 DIGEST:sha256:7521223d8a7c54a6c9e5a40b4f4866f4394eefb3494c5de8f47fbf4e536c40e9

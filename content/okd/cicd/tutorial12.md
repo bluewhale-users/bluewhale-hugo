@@ -7,28 +7,24 @@ weight: 52
 ## Private Repository 연동
 
 ### 1. SSH 키 생성
-``` 
 - Git Bash 실행
 - 사용자 폴더로 이동후 .ssh 폴더 생성 및 이동
 - ssh-keygen 실행
-```
 
 #### 1.1 ssh-keygen 사용시 기본값(SHA-1)은 github에서 더 이상 인증 용도로 사용할 수 없다. 
+{{% notice tip %}}
 Update : 2022-01-11  
 November 16, 2021	The ECDSA and Ed25519 host keys will start to be fully usable. GitHub’s DSA host key will no longer be supported.
-
-```
-Unable to connect SSH repository: unknown error: ERROR: You're using an RSA key with SHA-1, which is no longer allowed. Please use a newer client or a different key type.
-```
-```
-https://github.blog/2021-09-01-improving-git-protocol-security-github/
-
-- Removing support for all DSA keys
-- Adding requirements for newly added RSA keys
-- Removing some legacy SSH algorithms (HMAC-SHA-1 and CBC ciphers)
-- Adding ECDSA and Ed25519 host keys for SSH
+Unable to connect SSH repository: unknown error: ERROR: You're using an RSA key with SHA-1, which is no longer allowed. Please use a newer client or a different key type.  
+https://github.blog/2021-09-01-improving-git-protocol-security-github/  
+-> Removing support for all DSA keys   
+-> Adding requirements for newly added RSA keys  
+-> Removing some legacy SSH algorithms (HMAC-SHA-1 and CBC ciphers)  
+-> Adding ECDSA and Ed25519 host keys for SSH  
 Turning off the unencrypted Git protocol
+{{% /notice %}}
 
+```
 github 지원 타입
 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ecdsa-sha2-nistp384', 'ecdsa-sha2-nistp521', 'ssh-ed25519', 'sk-ecdsa-sha2-nistp256@openssh.com', 'sk-ssh-ed25519@openssh.com'.  
 
@@ -103,12 +99,14 @@ Receiving objects: 100% (3/3), done.
 
 ### 4. Jenkins Private Repository 설정 방법
 - Deploy Key 생성
-```
-SSH 키 생성
-Git Bash 실행
-사용자 폴더로 이동후 .ssh 폴더 생성 및 이동
-ssh-keygen 실행
-```
+
+{{% notice info %}}
+SSH 키 생성  
+Git Bash 실행  
+사용자 폴더로 이동후 .ssh 폴더 생성 및 이동  
+ssh-keygen 실행  
+{{% /notice %}}
+
 #### 4.1 ssh key 생성  
 {{< figure src="/cicd/tutorial12_8.jpg" >}}
 {{< figure src="/cicd/tutorial12_9.jpg" >}}
@@ -120,54 +118,44 @@ ssh-keygen 실행
 {{< figure src="/cicd/tutorial12_11.jpg" >}}
 
 ### 5. Jenkins 설정
-```
 - Jenkins →  Jenkins 관리 → Manage Credentials 이동
 - (global) 도메인 선택
-```
+
 {{< figure src="/cicd/tutorial12_12.jpg" >}}
 
-```
-Add Credentials 선택
-Kind를 SSH Username with private key 선택
-ID와 Username을 입력
-Privte Key에서 Enter directly를 선택후 Add를 눌러 생성한 Private Key를 메모장으로 열어 모두 복사후 붙여넣는다. 
-```
+- Add Credentials 선택
+- Kind를 SSH Username with private key 선택
+- ID와 Username을 입력
+- Privte Key에서 Enter directly를 선택후 Add를 눌러 생성한 Private Key를 메모장으로 열어 모두 복사후 붙여넣는다. 
 {{< figure src="/cicd/tutorial12_13.jpg" >}}
 
-```
-파이프라인 생성과정은 동일
-GitHub Repository에서 SSH Clone 주소를 확인한다. 
-git@github.com:blackwhale-testuser/privatetutorial.git
-```
+- 파이프라인 생성과정은 동일
+- GitHub Repository에서 SSH Clone 주소를 확인한다. 
+- git@github.com:blackwhale-testuser/privatetutorial.git
+
 {{< figure src="/cicd/tutorial12_14.jpg" >}}
 
-```
-Pipeline 설정에서 Repository URL을 위에서 확인한 주소로 넣는다. 
-Credentials에서 본인이 생성한 Credential을 선택한다. 
-```
+{{% notice tip %}}
+Pipeline 설정에서 Repository URL을 위에서 확인한 주소로 넣는다.  
+Credentials에서 본인이 생성한 Credential을 선택한다.   
+{{% /notice %}}
 {{< figure src="/cicd/tutorial12_15.jpg" >}}
 
 ### 6. ArgoCD Private Repository 설정 방법
 #### 6.1 ArgoCD 이동후 Settings → Repositories 이동
 {{< figure src="/cicd/tutorial12_16.jpg" >}}
 
-```
 - CONNECT REPO USING SSH 선택
 - 로컬에서 생성한 Private Key를 메모장으로 열어 모두 복사후 SSH private key data에 붙여 넣는다. 
 - Skip server verification 체크
 - Enable LFS support(Git only) 체크
 - Connect를 누른다. 
 - Connection Status가 Successful인지 확인
-```
 {{< figure src="/cicd/tutorial12_17.jpg" >}}
 
-```
-GitHub Private repository SSH 주소를 확인한다. 
-git@github.com:blackwhale-testuser/privatetutorial.git
-```
+- GitHub Private repository SSH 주소를 확인한다. 
+- git@github.com:blackwhale-testuser/privatetutorial.git
 {{< figure src="/cicd/tutorial12_18.jpg" >}}
 
-```
-App 생성시 Source의 Repository URL에 ssh 주소를 입력한다. 
-```
+- App 생성시 Source의 Repository URL에 ssh 주소를 입력한다. 
 {{< figure src="/cicd/tutorial12_19.jpg" >}}

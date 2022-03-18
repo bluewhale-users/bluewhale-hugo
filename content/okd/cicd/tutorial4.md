@@ -7,17 +7,17 @@ weight: 44
 ## Jenkins 설치
 
 
-### 1. OKD 로그인  
-https://console-openshift-console.apps.blackwhale.cloud.hancom.com/
-
-{{< figure src="/cicd/tutorial4_1.jpg" >}}
+### 1. OKD에 로그인
+- [okd link](https://console-openshift-console.apps.blackwhale.cloud.hancom.com/)
+{{< figure src="/cicd/tutorial4_1.jpg" title="[접속 화면]" >}}
 
 ### 2. Project 만들기  
 {{< figure src="/cicd/tutorial4_2.jpg" >}}
-{{< figure src="/cicd/tutorial4_3.jpg" >}}
+{{< figure src="/cicd/tutorial4_3.jpg" title="[프로젝트 생성 화면]" >}}
 
 ### 3. 역할 전환(developer)
-{{< figure src="/cicd/tutorial4_4.jpg" >}}
+좌측 상단의 역할선택 드롭메뉴에서 developer을 선택합니다.  
+{{< figure src="/cicd/tutorial4_4.jpg#floatleft" >}}
 {{< figure src="/cicd/tutorial4_5.jpg" >}}
 
 ### 4. Jenkins 설치

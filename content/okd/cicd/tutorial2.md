@@ -7,21 +7,21 @@ weight: 42
 
 ## GitHub Repository 준비
 
-## origin repository
-[src] https://github.com/bluewhale-users/okd-tutorial1-src  
-[gitops] https://github.com/bluewhale-users/okd-tutorial1-gitops
+### origin repository
+- [src](https://github.com/bluewhale-users/okd-tutorial1-src)
+- [gitops](https://github.com/bluewhale-users/okd-tutorial1-gitops)
 
-## fork repository
-[src] https://github.com/blackwhale-testuser/okd-tutorial1-src  
-[gitops] https://github.com/blackwhale-testuser/okd-tutorial1-gitops
   
-## 1. 2개 리파지토리를 본인 계정으로 fork 한다.  
+### 1. 2개 리파지토리를 본인 계정으로 fork
 {{< figure src="/cicd/tutorial2_1.jpg" >}}
 
-## 2. Deploy Key 생성 및 등록
-jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy key를 등록한다.
+- [src fork repo](https://github.com/blackwhale-testuser/okd-tutorial1-src)
+- [gitops fork repo](https://github.com/blackwhale-testuser/okd-tutorial1-gitops)
 
-### 2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성
+### 2. Deploy Key 생성 및 등록
+jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy key를 등록합니다.
+
+#### 2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성
 ```
 user@DESKTOP-1RAT70A MINGW64 ~/.ssh
 $ ssh-keygen
@@ -66,8 +66,8 @@ stage("Update Tag") {
                     branches: [[name: '*/master' ]],
                     extensions: scm.extensions,
                     userRemoteConfigs: [[                         
-+                   url: 'fork한 repo url',         
--                   url: 'git@github.com:blackwhale-testuser/okd-tutorial1-gitops.git', 
+-                   url: 'fork한 repo url',         
++                   url: 'git@github.com:blackwhale-testuser/okd-tutorial1-gitops.git', 
                     credentialsId: 'jenkins-ssh-private',
                     ]]
             ])
