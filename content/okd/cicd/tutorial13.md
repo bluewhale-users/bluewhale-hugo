@@ -7,12 +7,13 @@ weight: 53
 ## orca-harbor + buildconfig
 
 ### 1. image pull secret 추가
-```
-Secret name : orca-harbor-secret
-Registry server address : orca-harbor.cloud.hancom.com
-Username : "이름"
-Password : harbor 접속후 CLI secret 확인
-```
+{{% notice info %}}
+Secret name : orca-harbor-secret  
+Registry server address : orca-harbor.cloud.hancom.com  
+Username : "이름"  
+Password : harbor 접속후 CLI secret 확인  
+{{% /notice %}}
+
 {{< figure src="/cicd/tutorial13_1.jpg" >}}
 
 ### 2. User Profile을 눌러 CLI secret 복사후 사용
@@ -33,7 +34,7 @@ spec:
   output:
     to:
       kind: DockerImage
-      name: 'orca-harbor.cloud.hancom.com/okd/testblog:latest'
+      name: 'image 경로'
     pushSecret:
       name: 'orca-harbor-secret'
   source:
@@ -65,7 +66,7 @@ spec:
   output:
     to:
       kind: DockerImage
-      name: 'orca-harbor.cloud.hancom.com/external-addin/standardterm:latest'
+      name: 'image 경로'
     pushSecret:
       name: 'orca-harbor-usetoken' 
     type: Git

@@ -37,7 +37,4 @@ weight: 41
 - [GitHub Source](https://github.com/bluewhale-users/okd-tutorial1-src)  
 - [GitHub Gitops](https://github.com/bluewhale-users/okd-tutorial1-gitops)  
 - [DockerHub](https://hub.docker.com/)  
-- [Blackwhale OKD](https://console-openshift-console.apps.blackwhale.cloud.hancom.com)  
-- [ArgoCD](https://argocd-sample-server-okd-tutorial.apps.blackwhale.cloud.hancom.com/)  
-- [Test App](http://blog-frontend-okd-tutorial.apps.blackwhale.cloud.hancom.com/)
 

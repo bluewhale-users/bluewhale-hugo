@@ -28,7 +28,8 @@ spcsenti2023/okdtutorial:latest
 DIGEST:sha256:14480c323c64dd065fa0b71067226ab8995c5f2660a8e7d747795ebc2647e1b8
 ```
 
-[BuildConfig에서 빌드 번호 자동 업데이트 가능할까?](https://stackoverflow.com/questions/61057627/dynamic-tag-based-on-build-number-in-openshift-buildconfig)
+### 3. BuildConfig에서 빌드 번호 자동 업데이트 가능할까?
+- [stackoverflow](https://stackoverflow.com/questions/61057627/dynamic-tag-based-on-build-number-in-openshift-buildconfig)
 ```
 [Asked]
 I am doing CI/CD using openshift buildconfig. I am able to fetch the source code from git and successfully build the docker image and push to internal registry. I want to tag the image built with with build numbers based on Openshift Build config output labels are annotations. How to do that in the YAML, I am using docker build strategy.
@@ -46,7 +47,7 @@ The yaml file is resolved when the buildConfig is created, it can't have referen
 Another option I would prefer is to use ImageStreams. With ImageStream a single object keeps track of all versions of the image via sha codes, therefore there is no need to update the yaml every time.
 ```
 
-### 3. https 지원
+### 4. https 지원
 ```
 [service.yaml]
 ....

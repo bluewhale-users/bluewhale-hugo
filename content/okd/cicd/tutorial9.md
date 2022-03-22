@@ -7,11 +7,11 @@ weight: 49
 ## ArgoCD App 배포하기
 
 ### 1. image registry 주소 변경
-[GitOps Repo](https://github.com/blackwhale-testuser/okd-tutorial1-gitops)
+- [GitOps Repo](https://github.com/blackwhale-testuser/okd-tutorial1-gitops)
 
 - 아래 2개의 yaml파일을 편집해 이미지 경로를 본인 dockerhub의 계정과 리파지토리로 변경한다.  
-base/deployment-sample.yaml  
-okd-deploy/testblog-deployment.yaml  
+-- base/deployment-sample.yaml  
+-- okd-deploy/testblog-deployment.yaml  
 
 - image: docker.io/spcsenti/testblog:latest --> image: docker.io/spcsenti2023/okdtutorial:latest  
 
