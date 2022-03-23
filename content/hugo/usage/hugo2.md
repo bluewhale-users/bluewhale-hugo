@@ -1,7 +1,7 @@
 ---
 title: "Hugo2 : 사이트 구축"
 date: 2022-03-22T11:24:17+09:00
-draft: true
+draft: false
 weight: 42
 ---
 

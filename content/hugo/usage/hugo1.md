@@ -1,7 +1,7 @@
 ---
 title: "Hugo1 : Hugo 소개"
 date: 2022-03-22T11:23:48+09:00
-draft: true
+draft: false
 weight: 41
 ---
 

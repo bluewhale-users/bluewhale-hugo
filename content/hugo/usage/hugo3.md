@@ -1,7 +1,7 @@
 ---
 title: "Hugo3 : 테마 수정 및 변경"
 date: 2022-03-22T11:24:20+09:00
-draft: true
+draft: false
 weight: 43
 ---
 
