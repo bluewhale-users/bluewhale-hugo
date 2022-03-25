@@ -7,10 +7,10 @@ weight: 41
 
 ### 1. Hugo 
 - [gohugo.io](https://gohugo.io/)  
-- [github](https://github.com/gohugoio/hugo)    
+- [hugo github](https://github.com/gohugoio/hugo)    
 - [shortcodes](https://gohugo.io/content-management/shortcodes/)
 
-휴고(Hugo)는 Go로 작성된 정적 사이트 생성기입니다. 웹페이지 접속시 실시간으로 페이지를 생성하는 동적웹페이지와는 달리 휴고는 컨텐츠를 만들거나 업데이트시 페이지를 생성합니다. 따라서 휴고로 구축된 웹사이트는 일반적으로 더 빠르고 안전합니다. 
+휴고(Hugo)는 Go로 작성된 정적 사이트[^footnote1] 생성기입니다. 웹페이지 접속시 실시간으로 페이지를 생성하는 동적사이트[^footnote2]와 달리 휴고는 컨텐츠를 만들거나 업데이트시 페이지를 생성합니다. 따라서 휴고로 구축된 웹사이트는 일반적으로 더 빠르고 안전합니다.
 
 장점
 - 빌드 시간이 매우 빠르다. 
@@ -20,15 +20,6 @@ weight: 41
 - 정적 사이트를 렌더링하므로 제한없이 모든곳에서 호스팅할 수 있다. 
 
 
----
-## 참고
-- [참고1 : 구축하기](https://ialy1595.github.io/post/blog-construct-1/)
-- [참고2 : 커스터마이징](https://ialy1595.github.io/post/blog-construct-2/)
+[^footnote1]: static site는 고정된 html을 그냥 뿌려주는 사이트이다. 따라서 static site를 쓴다면 언제 들어간다고 해도 항상 같은 화면만 나온다.
 
-
----
-1) Dynamic site 그때그때 동적으로 html을 생성해서 보여주는 사이트다. 
-즉, dynamic site의 화면은 같은 주소라도 지속적으로 변할 수 있다. 
-
-2) static site는 고정된 html을 그냥 뿌려주는 사이트이다. 
-따라서 static site를 쓴다면 언제 들어간다고 해도 항상 같은 화면만 나온다.
+[^footnote2]: Dynamic site 그때그때 동적으로 html을 생성해서 보여주는 사이트다. 즉, dynamic site의 화면은 같은 주소라도 지속적으로 변할 수 있다. 

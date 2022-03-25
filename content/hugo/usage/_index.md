@@ -7,8 +7,7 @@ menu:
     parent: Usage
 ---
 
-
-#### [Hugo1](./hugo1)
-#### [Hugo2](./hugo2)
-#### [Hugo3](./hugo3)
-#### [Hugo4](./hugo4)
+#### [Hugo1 : Hugo 소개](./hugo1)
+#### [Hugo2 : 사이트 구축](./hugo2)
+#### [Hugo3 : 테마 수정 및 변경](./hugo3)
+#### [Hugo4 : css 스타일 참조](./hugo4)
