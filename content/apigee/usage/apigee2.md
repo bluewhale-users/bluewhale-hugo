@@ -83,15 +83,15 @@ Runtime location : asia-east1
 {{< figure src="/apigee/install_16.jpg" >}}
 
 ### 17. Access routing 설정
+- Domain 입력을 해야 한다. 
 {{< figure src="/apigee/install_17.jpg" >}}
 
-```
+{{% notice info %}}
 Domain이 없기 때문에 무료 도메인을 하나 생성한다. 
-```
+{{% /notice %}}
 
-### 18. [무료도메인 발급](https://blog.dalso.org/google-cloud-platform-2/nas-project/8678)
-
-[참고](https://blog.dalso.org/google-cloud-platform-2/nas-project/8678)
+### 18. 무료도메인 신청
+- [Duck DNS](https://www.duckdns.org/)
 {{< figure src="/apigee/install_19.jpg" >}}
 
 ### 19. 생성하고자 하는 도메인 이름을 서브 도메인에 입력한다.  
@@ -141,7 +141,3 @@ Launch spsenti2023.duckdns.org to test the 'Hello world' API.
 
 https://spsenti2023.duckdns.org/hello-world
 {{< figure src="/apigee/install_30.jpg" >}}
-
-
----
-[Apigee 프로비저닝 마법사](https://apigee.google.com/setup)
