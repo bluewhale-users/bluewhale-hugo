@@ -171,9 +171,9 @@ $ hugo new post/test.md
 Content "D:\\Git\\bluewhale\\bluewhale-hugo\\content\\post\\test.md" created
 ```
 
-### 3. 리파지토리 생성
+### 3. 리파지터리 생성
 
-2개의 리파지토리를 생성한다. 
+2개의 리파지터리를 생성한다. 
 1) 전체 컨텐츠를 저장할 곳
 2) 빌드 결과로 github page를 띄울 곳
 
@@ -190,7 +190,7 @@ $ git init
 $ git remote add origin https://github.com/bluewhale-users/bluewhale-hugo
 ```
 
-#### 3.2 github page 리파지토리 연결(bluewhale.github.io)
+#### 3.2 github page 리파지터리 연결(bluewhale.github.io)
 ```
 $ git submodule add -b master https://github.com/bluewhale-users/bluewhale.github.io.git public
 ```

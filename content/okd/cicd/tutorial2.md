@@ -1,5 +1,5 @@
 ---
-title: "Tutorial2 : 리파지토리 생성"
+title: "Tutorial2 : 리파지터리 생성"
 date: 2022-03-15T11:27:51+09:00
 draft: false
 weight: 42
@@ -12,14 +12,14 @@ weight: 42
 - [gitops](https://github.com/bluewhale-users/okd-tutorial1-gitops)
 
   
-### 1. 2개 리파지토리를 본인 계정으로 fork
+### 1. 2개 리파지터리를 본인 계정으로 fork
 {{< figure src="/cicd/tutorial2_1.jpg" >}}
 
 - [src fork repo](https://github.com/blackwhale-testuser/okd-tutorial1-src)
 - [gitops fork repo](https://github.com/blackwhale-testuser/okd-tutorial1-gitops)
 
 ### 2. Deploy Key 생성 및 등록
-jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy key를 등록합니다.
+jenkins 빌드후 gitops 리파지터리에 commit을 수행하기 위해 deploy key를 등록합니다.
 
 #### 2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성
 ```

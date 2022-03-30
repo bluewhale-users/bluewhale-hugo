@@ -12,14 +12,14 @@ weight: 41
 {{% notice info %}}
 'GitOps'는 형상 관리 도구인 'Git' 을 통해 개발자에게 익숙한 방식으로 인프라 또는 
 어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말합니다.
-이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지토리가 필요합니다. 
+이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지터리가 필요합니다. 
 {{% /notice %}}
 
 ### 2. OKD CI/CD 프로세스
-1. Source Repo에 변경사항을 Commit 한다. 
+1. Source 리파지터리에 변경사항을 Commit 한다. 
 2. Jenkins에서 변경사항을 감지하고 빌드를 수행한다. 
 3. Docker Image를 dockerhub에 Push한다. 
-4. GitOps Repo의 deployment manifest파일을 업데이트(tag version)한다. 
+4. GitOps 리파지터리의 deployment manifest파일을 업데이트(tag version)한다. 
 5. ArgoCD가 변경사항을 감지하고 자동 배포 수행한다. 
 
 ### 3. 사전 준비

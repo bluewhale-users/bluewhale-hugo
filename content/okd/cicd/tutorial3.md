@@ -12,7 +12,7 @@ weight: 43
 {{< figure src="/cicd/tutorial3_1.jpg" >}}
 
 
-### 2.리파지토리를 생성
+### 2. 리파지터리를 생성
 ```
 name : okdtutorial  
 visibility : public  
