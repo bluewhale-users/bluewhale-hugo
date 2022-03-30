@@ -220,7 +220,7 @@ $ hugo -t hugo-theme-learn
 ```
 
 
-### 4. 오류
+### 4. submodule 추가시 오류
 ```
 PS D:\Git\bluewhale\bluewhale-hugo> git submodule add -b master https://github.com/bluewhale-users/bluewhale.github.io.git public --force
 A git directory for 'public' is found locally with remote(s):
@@ -229,12 +229,14 @@ If you want to reuse this local git directory instead of cloning again from
   https://github.com/bluewhale-users/bluewhale.github.io.git
 use the '--force' option. If the local git directory is not the correct repo
 or you are unsure what this means choose another name with the '--name' option.
-
-.git/modules/ 폴더 삭제
 ```
 
+{{% notice tip %}}
+.git/modules/ 폴더 삭제후 다시 시도
+{{% /notice %}}
+
 ### 5. front matter 
-[spec](https://gohugo.io/content-management/front-matter/)
+- [Front Matter Formats](https://gohugo.io/content-management/front-matter/)
 
 
 
