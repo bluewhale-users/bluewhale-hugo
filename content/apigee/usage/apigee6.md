@@ -5,7 +5,7 @@ draft: false
 weight: 46
 ---
 
-#### 1. 페이지 추가(+Page 선택)
+#### 1. 페이지 추가("+Page" 선택)
 {{< figure src="/apigee/apigee-tutorial4_1.jpg" >}}
 
 #### 2. 페이지 이름 입력(경록 확인 : test)

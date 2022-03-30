@@ -5,13 +5,13 @@ draft: false
 weight: 47
 ---
 
-### Create New
+### 1. Create New
 {{< figure src="/apigee/apigee-tutorial5_1.jpg" >}}
 
-### Reverse Proxy 선택
+### 2. Reverse Proxy 선택
 {{< figure src="/apigee/apigee-tutorial5_2.jpg" >}}
 
-### Proxy details
+### 3. Proxy details
 {{< figure src="/apigee/apigee-tutorial5_3.jpg" >}}
 
 ```
@@ -27,25 +27,25 @@ Security(Authorization) : API Key
 Quota: Impose quotas per App
 Security(Browser) : Add CORS headers
 ```
-#### Summary
+#### 4. Summary
 {{< figure src="/apigee/apigee-tutorial5_5.jpg" >}}
 
-#### Edit Proxy
+#### 5. Edit Proxy
 {{< figure src="/apigee/apigee-tutorial5_6.jpg" >}}
 
-#### Overview
+#### 6. Overview
 {{< figure src="/apigee/apigee-tutorial5_7.jpg" >}}
 
-#### eval(개발환경) deploy
+#### 7. eval(개발환경) deploy
 {{< figure src="/apigee/apigee-tutorial5_8.jpg" >}}
 
 - Deploy 선택
 {{< figure src="/apigee/apigee-tutorial5_9.jpg" >}}
 
-#### DEVELOP 탭 확인
+#### 8. DEVELOP 탭 확인
 {{< figure src="/apigee/apigee-tutorial5_10.jpg" >}}
 
-### PreFlow
+### 9. PreFlow
 ```
 [Policies]
 - Add CORS
@@ -55,10 +55,10 @@ Security(Browser) : Add CORS headers
 ```
 
 ---
-### API Products 추가(Create New 선택)
+### 10. API Products 추가(Create New 선택)
 {{< figure src="/apigee/apigee-tutorial5_11.jpg" >}}
 
-### Product details 입력
+### 11. Product details 입력
 {{< figure src="/apigee/apigee-tutorial5_12.jpg" >}}
 
 ```
@@ -68,7 +68,7 @@ Environment: eval
 Access: Public
 ```
 
-#### Oprations 추가(ADD AN OPERATION)
+#### 12. Oprations 추가(ADD AN OPERATION)
 {{< figure src="/apigee/apigee-tutorial5_13.jpg" >}}
 
 ```
@@ -77,13 +77,13 @@ Operation: /okd-api
 Methods: 모두 선택
 ```
 
-#### Save를 눌러 저장한다. 
+#### 13. Save를 눌러 저장한다. 
 {{< figure src="/apigee/apigee-tutorial5_14.jpg" >}}
 
-#### Potal로 이동(API catalog 선택)
+#### 14. Potal로 이동(API catalog 선택)
 {{< figure src="/apigee/apigee-tutorial5_15.jpg" >}}
 
-#### API Documenttation 추가
+#### 15. API Documenttation 추가
 [API URL](https://spsenti2023.duckdns.org/okd-api)
 [sample json]
 ``` json

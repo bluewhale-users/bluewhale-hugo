@@ -13,7 +13,7 @@ weight: 44
 
 ### 3. 관리 화면
 - 우측 상단의 Live Potal을 선택한다. 
-- {{< figure src="/apigee/apigee-tutorial2_3.jpg" >}}
+{{< figure src="/apigee/apigee-tutorial2_3.jpg" >}}
 
 ### 4. 개발자포털 화면
 - https://pure-fold-339305-developers.apigee.io/
@@ -52,7 +52,7 @@ weight: 44
 ### 10. API Catalog 추가
 - API catalog를 선택한다. 
 {{< figure src="/apigee/apigee-tutorial2_16.jpg" >}}
-- + 버튼을 누른다. 
+- "+" 버튼을 누른다. 
 {{< figure src="/apigee/apigee-tutorial2_17.jpg" >}}
 - okd-api-sample을 선택한다. 
 {{< figure src="/apigee/apigee-tutorial2_18.jpg" >}}
@@ -64,7 +64,7 @@ weight: 44
 ### 11. Menu에 추가
 - Menus를 선택한다. 
 {{< figure src="/apigee/apigee-tutorial2_21.jpg" >}}
-- +Menu Item을 선택한다. 
+- "+Menu Item" 선택한다. 
 {{< figure src="/apigee/apigee-tutorial2_23.jpg" >}}
 - 이름을 입력한다.  
 - Page Path or URL에 이전에 생성한 okd-api-sample을 선택한다. 
@@ -73,8 +73,6 @@ weight: 44
 {{< figure src="/apigee/apigee-tutorial2_24.jpg" >}}
 
 ### 12. 포털 화면으로 이동한다.
-> [포털](https://pure-fold-339305-developers.apigee.io/)
-
 - APIs를 선택하면 추가한 페이지가 보인다. 
 {{< figure src="/apigee/apigee-tutorial2_25.jpg" >}}
 - My Apps -> NEW APP을 선택한다. 

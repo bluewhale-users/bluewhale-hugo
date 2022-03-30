@@ -7,8 +7,7 @@ weight: 45
 
 ## 개발자 포털
 
-[Open-API-Specification](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.0.md)  
-[샘플](https://blog.sonim1.com/217)
+- [Open-API-Specification](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.0.md)  
 
 ### 1. API Document 추가
 - API catalog 선택
@@ -29,7 +28,7 @@ weight: 45
 {{< figure src="/apigee/apigee-tutorial3_5.jpg" >}}
 {{< figure src="/apigee/apigee-tutorial3_6.jpg" >}}
 
-[sample json]
+- json sample
 ``` json
 {
   "openapi": "3.0.1",

@@ -5,9 +5,7 @@ draft: false
 weight: 49
 ---
 
-[참고](https://cloud.google.com/apigee/docs/api-platform/local-development/vscode/tutorial-test)
-
-> Google Cloud SDK와 gcloud beta apigee 구성요소 설치
+#### 0. Google Cloud SDK와 gcloud beta apigee 구성요소 설치
 
 - gcloud beta 구성요소 설치
 ```
@@ -218,17 +216,6 @@ Your current project is [pure-fold-339305].  You can change this setting by runn
 
 - 새 환경 추가
 {{< figure src="/apigee/apigee-tutorial7_3.jpg" >}}
-
-```
-새 환경을 만든 후 다음을 수행해야 합니다.
-- 새 환경을 인스턴스에 연결합니다. 
-- UI에서는 이 작업을 수행할 수 없습니다. 
-- 대신 Instances attachment create API를 사용하여 인스턴스에 환경을 연결합니다. 
-  이를 수행하는 방법에 대한 예시는 명령줄 프로비저닝 문서에서 환경 만들기를 참조하세요.
-- 새 환경을 환경 그룹에 할당합니다. 
-  그룹에 할당되지 않은 환경에는 자신을 가리키는 호스트 이름이 없으므로 액세스할 수 없습니다. 
-  자세한 내용은 환경 그룹 만들기를 참조하세요.
-```
 
 - 인스턴스 연결
 {{< figure src="/apigee/apigee-tutorial7_16.jpg" >}}

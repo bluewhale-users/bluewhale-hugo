@@ -5,9 +5,7 @@ draft: false
 weight: 48
 ---
 
-[참고](https://cloud.google.com/apigee/docs/api-platform/local-development/vscode/get-started)
-
-### 순서
+### 작업 순서
 1. Apigee 작업공간을 만들어 Apigee를 사용하는 로컬 개발에 필요한 디렉터리 구조를 설정합니다.
 2. API 프록시를 만듭니다. API 프록시를 모의 대상 엔드포인트에 연결하여 작동 방식을 확인할 수 있습니다.
 3. 새 API 프록시가 포함된 환경을 구성하고 배포합니다.
@@ -21,14 +19,14 @@ weight: 48
 ## Apigee 작업 공간 만들기
 
 ### 1. Extention 설치
-> Apigee 검색후 Cloud Code 설치   
+- Apigee 검색후 Cloud Code 설치   
 {{< figure src="/apigee/apigee-tutorial6_1.jpg" >}}
 
 ### 2. Cloud Code - Apigee 클릭
 {{< figure src="/apigee/apigee-tutorial6_2.jpg" >}}
 
 ### 3. Apigee 작업공간 만들기
-> Create Apigee workspace 선택  
+- Create Apigee workspace 선택  
 {{< figure src="/apigee/apigee-tutorial6_3.jpg" >}}
 
 ### 4. 이름을 입력후 엔터(myapigeeworkspace)
@@ -173,14 +171,14 @@ API 키를 얻으려면 테스트 번들을 만들고 다음 테스트 리소스
 ```
 
 ### 3. 개발자 테스트 리소스 구성
-- developers.json파일 우측의 +클릭(이메일 입력)
+- developers.json파일 우측의 "+" 클릭(이메일 입력)
 {{< figure src="/apigee/apigee-tutorial6_24.jpg" >}}
 {{< figure src="/apigee/apigee-tutorial6_26.jpg" >}}
 {{< figure src="/apigee/apigee-tutorial6_27.jpg" >}}
 {{< figure src="/apigee/apigee-tutorial6_28.jpg" >}}
 
 ```
-개발자 이메일: hskim@hancom.com
+개발자 이메일: hskim@XXXX.com
 사용자 이름: hskim  
 이름: haksoo
 성: kim
@@ -196,7 +194,7 @@ API 키를 얻으려면 테스트 번들을 만들고 다음 테스트 리소스
         "value": "sample_attribute_value_0"
       }
     ],
-    "email": "hskim@hancom.com",
+    "email": "hskim@XXXX.com",
     "userName": "hskim",
     "firstName": "haksoo",
     "lastName": "kim"
@@ -221,7 +219,7 @@ API 키를 얻으려면 테스트 번들을 만들고 다음 테스트 리소스
 {{< figure src="/apigee/apigee-tutorial6_33.jpg" >}}
 
 ```
-앱 소유자 hskim@hancom.com
+앱 소유자 hskim@XXXX.com
 앱 이름: myapp
 설명: myapp
 콜백 URL: 비워 둠
