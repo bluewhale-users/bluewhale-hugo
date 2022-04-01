@@ -47,7 +47,7 @@ oc login [URL] [options]
 {{< tabs >}}
 {{% tab name="windows" %}}
 ```windows
-C:\Users\user>oc login --token=sha256~HH2JyDxeBpYgftntfZ267WREYlSv1tXJFyw7PGuT1wc --server=https://api.your-okd.com:6443
+C:\Users\user>oc login --token=sha256~HH2JyDxeBpYg******************** --server=https://api.your-okd.com:6443
 Logged into "api.your-okd.com:6443" as "user@your-okd.com" using the token provided.
 
 You have access to 97 projects, the list has been suppressed. You can list all projects with 'oc projects'
