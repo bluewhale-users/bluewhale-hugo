@@ -31,7 +31,7 @@ OKD는 Kubernetes 클러스터 위에서 실행되기 때문에 kubectl도 oc CL
 * 환경변수에 경로 추가  
   * window + Q로 검색창을 연 뒤 환경 변수를 검색해서 환경 변수 선택  
   * 시스템변수의 Path를 더블클릭한다.  
-  * 새로 만들기를 클릭한 다음 아까 압축을 풀었던 곳의 경로를 등록  
+  * 새로 만들기를 클릭한 다음 압축을 풀었던 곳의 경로를 등록  
 * command에서 oc version을 쳐서 확인
 
 
@@ -45,7 +45,12 @@ error: You must be logged in to the server (Unauthorized)
 {{% /tab %}}
 {{% tab name="MacOS" %}}
 ```Bash
-brew install openshift-cli
+# 패키지 관리자로 다운로드
+$ brew install openshift-cli
+# 직접 다운로드후 압축해제
+$ tar xvzf <file>
+$ echo $PATH
+$ oc version
 ```
 {{% /tab %}}
 {{< /tabs >}}
