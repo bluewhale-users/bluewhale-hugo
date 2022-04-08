@@ -27,28 +27,49 @@ weight: 42
 - 화면에서 우클릭하여 메뉴 확인(Samples 선택)
 {{< figure src="/web-console/tutorial2_6.jpg" >}}  
 
-### 6. 미리 준비된 코드 샘플을 사용하여 어플리케이션을 생성
+### 6. 코드 샘플을 사용하여 어플리케이션을 생성(Nginx)
+- Nginx 선택
+{{< figure src="/web-console/tutorial2_19.jpg" >}}  
+
+### 7. Name 입력(my-nginx-sample)
+- [source github](https://github.com/sclorg/nginx-ex)
+{{< figure src="/web-console/tutorial2_20.jpg" >}}  
+
+### 8. 빌드중 상태가 종료될때까지 대기한다. 
+{{< figure src="/web-console/tutorial2_21.jpg" >}}  
+
+### 9. 빌드 성공
+{{< figure src="/web-console/tutorial2_22.jpg" >}}  
+
+### 10. OpenURL을 통해 서비스에 접속
+{{< figure src="/web-console/tutorial2_23.jpg" >}}
+
+- 접속 화면
+{{< figure src="/web-console/tutorial2_24.jpg" >}}
+
+---
+### 11. 코드 샘플을 사용하여 어플리케이션을 생성(node.js)
 - Node.js 선택
 - [source github](https://github.com/sclorg/nodejs-ex )
 {{< figure src="/web-console/tutorial2_7.jpg" >}}  
 
-### 7. 샘플 어플리케이션 생성 화면
+### 12. 샘플 어플리케이션 생성 화면
 - 이름변경(나머지는 기본값 사용)후 create를 클릭한다. 
 {{< figure src="/web-console/tutorial2_8.jpg" >}}  
 
-### 8. 빌드중 상태가 종료될때까지 대기한다. 
+### 13. 빌드중 상태가 종료될때까지 대기한다. 
 {{< figure src="/web-console/tutorial2_9.jpg" >}}  
 
-### 9. 빌드 성공
+### 14. 빌드 성공
 {{< figure src="/web-console/tutorial2_10.jpg" >}}
 
-### 10. OpenURL을 통해 서비스에 접속
+### 15. OpenURL을 통해 서비스에 접속
 {{< figure src="/web-console/tutorial2_11.jpg" >}}
 
 - 접속 화면  
 {{< figure src="/web-console/tutorial2_12.jpg" >}}
 
-### 11. DB 연결
+### 16. DB 연결
 - 방문 횟수가 카운트되어 보여야 하지만 DB 연결 실패 메시지가 출력된다. 
 {{< figure src="/web-console/tutorial2_13.jpg" >}}
 
@@ -213,5 +234,5 @@ NO_PROXY=
 MONGO_URL='mongodb://admin:secret@172.30.127.231:27017/mongo_db'
 ```
 
-### 12. mongodb 배포 화면
+### 17. mongodb 배포 화면
 {{< figure src="/web-console/tutorial2_18.jpg" >}}
