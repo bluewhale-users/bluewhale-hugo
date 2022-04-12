@@ -8,6 +8,11 @@ img[src$='#floatright']
 	float:right;
 }
 
+img[src$='#floatcenter']
+{
+	float:center;
+}
+
 figure.floatright {
 	max-width: 30%;
 	width: auto\9*0.3; /* ie8 */
@@ -21,3 +26,11 @@ figure.floatleft {
 	height: auto;
 	float: left;
 }
+
+.imgleft {
+	margin: auto;
+	float: left;	
+	width: 50%;
+	border: 3px solid black;
+	padding: 10px;
+  }
