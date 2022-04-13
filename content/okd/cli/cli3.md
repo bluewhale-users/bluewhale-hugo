@@ -95,7 +95,7 @@ Use "oc options" for a list of global command-line options (applies to all comma
 
 ### 1. 리파지터리를 Clone
 ```
->git@github.com:bluewhale-users/okd-tutorial3.git
+>git clone git@github.com:bluewhale-users/okd-tutorial3.git
 Cloning into 'okd-tutorial3'...
 remote: Enumerating objects: 16, done.
 remote: Counting objects: 100% (16/16), done.
@@ -107,7 +107,7 @@ Resolving deltas: 100% (4/4), done.
 
 ### 2. oc login후 작업 프로젝트 확인(okd-tutorials)
 ```
->oc login --token=sha256~5xJaXd-nYyZcB5-2ckPv-bJeLKc8mShxO-F3RrS0JIU --server=https://api.your-okd.com:6443
+>oc login --token=sha256~5xJaXd-nYyZcB5-2ckPv******************** --server=https://api.your-okd.com:6443
 Logged into "https://api.your-okd.com:6443" as "user@your-okd.com" using the token provided.
 
 You have access to 94 projects, the list has been suppressed. You can list all projects with 'oc projects'
