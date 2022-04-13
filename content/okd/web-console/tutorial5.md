@@ -7,7 +7,7 @@ weight: 45
 
 - [sample github](https://github.com/bluewhale-users/okd-tutorial2-src)
 
-### 1. Sample Code Clone
+### 1. Sample Code를 Clone한다. 
 
 {{< tabs >}}
 {{% tab name="windows" %}}
