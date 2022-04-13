@@ -1,5 +1,5 @@
 ---
-title: "Cli2 : Basic Commands"
+title: "CLI2 : Basic Commands"
 date: 2022-03-31T15:53:12+09:00
 draft: false
 weight: 42
