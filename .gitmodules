@@ -2,3 +2,6 @@
 	path = public
 	url = https://github.com/bluewhale-users/bluewhale.github.io.git
 	branch = master
+[submodule "themes/hugo-theme-learn"]
+	path = themes/hugo-theme-learn
+	url = https://github.com/matcornic/hugo-theme-learn.git
